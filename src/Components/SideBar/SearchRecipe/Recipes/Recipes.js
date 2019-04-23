@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
+import Recipe from "./Recipe";
 
 const Recipes = props => (
   <div className="container">
@@ -22,11 +23,9 @@ const Recipes = props => (
                 </span></p>
               </div>
               <button className="recipe_buttons">
-              <Link to={{ 
-                  pathname: `/recipe/${recipe.recipe_id}`,
-                  state: { recipe: recipe.title }
-                }}>View Recipe</Link>
+              <Link to="/recipe">View Recipe</Link>
               </button>
+              <Route path="/recipe" component={Recipe} />
           </div>
         </div>
       );

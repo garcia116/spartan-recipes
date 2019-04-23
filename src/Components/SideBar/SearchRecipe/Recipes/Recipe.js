@@ -2,8 +2,7 @@ import React from 'react';
 
 import { Link } from "react-router-dom";
 
-const API_KEY = "01b95f80bbd4b9e0e29d33d930d51dac";
-const API_ID = "79a1d6a6";
+const API_KEY = "1ce517ea7232056c079ee8310604d9cf";
 
 class Recipe extends React.Component {
   state = {
@@ -11,7 +10,7 @@ class Recipe extends React.Component {
   }
   componentDidMount = async () => {
     const title = this.props.location.state.recipe;
-    const req = await fetch(https://api.edamam.com/search?app_id=${API_ID}&app_key=${API_KEY}&q=${title}`);
+    const req = await fetch(`http://food2fork.com/api/search?key=${API_KEY}&q=${title}`);
     
     const res = await req.json();
     this.setState({ activeRecipe: res.recipes[0] });
