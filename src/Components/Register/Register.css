@@ -1,0 +1,145 @@
+.form-group{
+	text-transform: uppercase;
+	font-weight: 700;
+	padding-left: 15px;
+}
+
+.form-check{
+	position: relative;
+	left: 150px;
+}
+
+div.form-check.form-check-inline{
+	font-weight: 500;
+	letter-spacing: .5px;
+}
+
+.form-check-inline .form-check-input{
+	margin-left: .3125rem;
+}
+
+div.field{
+	padding: 3px;
+
+}
+
+
+a.forgot-password{
+  position: relative;
+  left: 250px;
+}
+
+div{
+  display: block;
+}
+
+body div#content{
+  max-width: 650px;
+}
+
+div#content{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#content div#main{
+  background-color: rgba(50, 23, 20, 0.65);
+  color: white;
+  padding-top: 1px;
+  margin-bottom: 140px;
+
+
+}
+
+div#content div.container{
+  position: relative;
+}
+
+body div.login-options{
+  padding: 25px 20px 15px;
+  text-align: center;
+}
+
+
+
+body div.login-options div.title{
+  float: left;
+  margin: 0;
+  width: 50%;
+  border-bottom: 1px solid #999;
+  box-sizing: border-box;
+  border-radius: 0;
+  padding: 20px 0px 17px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.7;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+div.login-options div.title.active{
+  border: 1px solid #999;
+  border-bottom: 0;
+  height: 61px;
+}
+
+div.clear{
+  height: 1px;
+  clear: both;
+  width: 100%;
+}
+
+
+p.qa-use-email{
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2.3px;
+  line-height: 21.6px;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  margin-left: 18px;
+  margin-right: 18px;
+
+}
+
+div.field{
+  padding: 3px;
+}
+
+div.field label{
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 2;
+  position: relative;
+  left: 150px;
+}
+
+.form-control{
+  width: 50%;
+  position: relative;
+  left: 150px;
+
+}
+
+.btn{
+  position: relative;
+  left: 180px;
+  width: 40%; 
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+p.qa-not-active{
+  color:#007bff;
+  cursor: pointer;
+ 
+}
+
+P.qa-not-active:hover{
+	 text-decoration-line: underline;
+}
