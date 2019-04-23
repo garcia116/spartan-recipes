@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Route,
   NavLink,
-  HashRouter
+  BrowserRouter
 } from "react-router-dom";
 import { slide as Menu } from 'react-burger-menu';
 import './Sidebar.css';
@@ -18,18 +18,18 @@ class Sidebar extends React.Component {
 
   render () {
     return (
-      <HashRouter>
+      <BrowserRouter>
       <Menu>
-        <NavLink to="/search" className="menu-item">Search Recipe</NavLink>
+        <NavLink to="/" className="menu-item">Search Recipe</NavLink>
         <NavLink to="/login" className="menu-item">Add Recipe</NavLink>
         <NavLink to="/inventory" className="menu-item">Inventory</NavLink>
         <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
       </Menu>
       <div className="content">
-        <Route path="/search" component={SearchRecipe }/>
+        <Route path="/" component={SearchRecipe } exact/>
         <Route path="/inventory" component={Inventory}/>
       </div>
-      </HashRouter>
+      </BrowserRouter>
 
     );
   }

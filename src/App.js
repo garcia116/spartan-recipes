@@ -4,6 +4,7 @@ import DefaultLayout from './Components/DefaultLayout/DefaultLayout';
 import SideBar from './Components/SideBar/SideBar';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
+import Router from './Components/SideBar/SearchRecipe/Router';
 
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
     		? <div>
           <DefaultLayout />
           <SideBar />
+          <Router />
      </div>
     		: (
             this.state.route === 'login' 

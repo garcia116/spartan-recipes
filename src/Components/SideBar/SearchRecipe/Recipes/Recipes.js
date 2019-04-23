@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { Link, Route } from "react-router-dom";
+import { Link, Route, BrowserRouter } from "react-router-dom";
 import Recipe from "./Recipe";
 
 const Recipes = props => (
+  <BrowserRouter>
   <div className="container">
     <div className="row">
     { props.recipes.map((recipe) => {
@@ -23,15 +24,19 @@ const Recipes = props => (
                 </span></p>
               </div>
               <button className="recipe_buttons">
-              <Link to="/recipe">View Recipe</Link>
+              <Link to={{ 
+                  pathname: `/recipe/${recipe.recipe_id}`,
+                  state: { recipe: recipe.title }
+                }}>View Recipe</Link>
               </button>
-              <Route path="/recipe" component={Recipe} />
+
           </div>
         </div>
       );
     })}
     </div>
   </div>
+  </BrowserRouter>
 );
 
 export default Recipes;

@@ -6,12 +6,12 @@ const Login = ({onRouteChange}) => {
 	return (
 
 		<body>
-  <h1 class="site-heading text-center text-white d-none d-lg-block">
-    <span class="site-heading-lower">Spartan Recipes</span>
+  <h1 className="site-heading text-center text-white d-none d-lg-block">
+    <span className="site-heading-lower">Spartan Recipes</span>
   </h1>
 
 <Navbar bg="primary" expand="lg" id="mainNav">
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" >Spartan Recipes</a>
+      <a className="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" >Spartan Recipes</a>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
  
 </Navbar>;
@@ -29,12 +29,12 @@ const Login = ({onRouteChange}) => {
 					<div class="clear"></div>
 			</div>
 			<br/>
-			<p class="qa-use-email">Sign in with email</p>
+			<p className="qa-use-email">Sign in with email</p>
 			
 		</div>
 
 	<form>
-  <div class="field">
+  <div className="field">
     <label for="InputEmail">Email address:</label>
     <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email"/>
   </div>

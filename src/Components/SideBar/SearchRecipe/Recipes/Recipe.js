@@ -10,7 +10,8 @@ class Recipe extends React.Component {
   }
   componentDidMount = async () => {
     const title = this.props.location.state.recipe;
-    const req = await fetch(`http://food2fork.com/api/search?key=${API_KEY}&q=${title}`);
+    if (this.state.title == '') {return null}
+    const req = await fetch(`https://cors-anywhere.herokuapp.com/http://food2fork.com/api/search?key=${API_KEY}&q=${title}`);
     
     const res = await req.json();
     this.setState({ activeRecipe: res.recipes[0] });
@@ -31,7 +32,7 @@ class Recipe extends React.Component {
               <span><a href={recipe.publisher_url}>{recipe.publisher_url}</a></span>
             </p>
             <button className="active-recipe__button">
-              <Link to="/search">Go Home</Link>
+              <Link to="/">Go Home</Link>
             </button>
           </div>
         }
