@@ -29,7 +29,7 @@ const Recipes = props => (
                   state: { recipe: recipe.title }
                 }}>View Recipe</Link>
               </button>
-
+              <Route path="/recipe/${recipe.recipe_id}" component={Recipe}/>
           </div>
         </div>
       );

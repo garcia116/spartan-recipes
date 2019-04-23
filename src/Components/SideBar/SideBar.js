@@ -17,8 +17,10 @@ class Sidebar extends React.Component {
   }
 
   render () {
+
     return (
       <BrowserRouter>
+
       <Menu>
         <NavLink to="/" className="menu-item">Search Recipe</NavLink>
         <NavLink to="/login" className="menu-item">Add Recipe</NavLink>
@@ -26,7 +28,7 @@ class Sidebar extends React.Component {
         <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
       </Menu>
       <div className="content">
-        <Route path="/" component={SearchRecipe } exact/>
+        <Route path="/" component={SearchRecipe } exact />
         <Route path="/inventory" component={Inventory}/>
       </div>
       </BrowserRouter>
