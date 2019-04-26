@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import { slide as Menu } from 'react-burger-menu';
 import './Sidebar.css';
-import SearchRecipe from './SearchRecipe/SearchRecipe';
+import SearchRecipe from './SearchRecipe/Router';
 import Inventory from './Inventory/EnhancedTableHead';
 import Login from './Login/Login';
 
