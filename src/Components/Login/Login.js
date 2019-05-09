@@ -21,7 +21,7 @@ class Login extends React.Component {
 
 	onSubmitLogin = (event) => {
 		event.preventDefault();
-		fetch('http://localhost:3000/signin', {
+		fetch('https://afternoon-beyond-43965.herokuapp.com/signin', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({

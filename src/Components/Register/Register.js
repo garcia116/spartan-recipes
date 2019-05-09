@@ -32,7 +32,7 @@ constructor(props) {
 
   onSubmitLogin = (event) => {
     event.preventDefault();
-    fetch('http://localhost:3000/register', {
+    fetch('https://afternoon-beyond-43965.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
