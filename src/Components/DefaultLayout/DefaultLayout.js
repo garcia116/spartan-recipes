@@ -22,9 +22,7 @@ const DefaultLayout = () => {
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="ml-auto">
         <NavDropdown className="text-uppercase" title="My Account" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="./Login/Login">Sign Out</NavDropdown.Item>
+        <NavDropdown.Item href="/">Sign Out</NavDropdown.Item>
        </NavDropdown>
     </Nav>
   </Navbar.Collapse>

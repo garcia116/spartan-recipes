@@ -12,28 +12,53 @@ class App extends Component {
 	constructor(){
 		super();
 		this.state ={
-			route: 'login'
+			route: 'login',
+      isSignedIn: false,
+      user: {
+      id: '',
+      firstname: '',
+      lastname: '', 
+      email: '', 
+      joined: new Date()
+      }
 		}
 	}
 
+  loadUser = (data) => {
+    this.setState({user: {
+      id: data.id,
+      firstname: data.firstname,
+      lastname: data.lastname,
+      email: data.email, 
+      joined: data.joined
+    }})
+      
+  }
+
   onRouteChange = (route) => {
+    if (route === 'signout'){
+      this.setState({isSignedIn: false})
+    } else if (route === 'home') {
+      this.setState({isSignedIn: true})
+    }
     this.setState({route: route });
   }
 
   render() {
-    return(
-    <div className="App">
+    const { isSignedIn, route } = this.state;
+    return (
+    <div className="App" >
     	{
-    		this.state.route === 'home'
+    		route === 'home'
     		? <div>
           <DefaultLayout />
           <SideBar />
 
      </div>
     		: (
-            this.state.route === 'login' 
-            ? <Login onRouteChange={this.onRouteChange} />
-            : <Register onRouteChange={this.onRouteChange} />
+            route === 'login' 
+            ? <Login loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
+            : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
 
           )
      		 

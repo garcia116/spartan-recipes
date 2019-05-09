@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Link} from "react-router-dom";
-import Recipe from "./Recipe";
 
 const Recipes = props => (
   <div className="container">
@@ -21,6 +20,7 @@ const Recipes = props => (
                 <p className="recipes__subtitle">Publisher: <span>
                   { recipe.recipe.source }
                 </span></p>
+                <p className="recipes_calories">Calories: {recipe.recipe.calories} </p>
               </div>
               <button className="recipe_buttons">
                 <Link to={{ 

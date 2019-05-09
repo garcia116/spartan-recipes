@@ -7,8 +7,7 @@ import {
 import { slide as Menu } from 'react-burger-menu';
 import './Sidebar.css';
 import SearchRecipe from './SearchRecipe/Router';
-import Inventory from './Inventory/EnhancedTableHead';
-import Login from './Login/Login';
+import Inventory from './Inventory/InventoryDefault';
 
 class Sidebar extends React.Component {
   showSettings (event) {
@@ -23,7 +22,7 @@ class Sidebar extends React.Component {
 
       <Menu>
         <NavLink to="/" className="menu-item">Search Recipe</NavLink>
-        <NavLink to="/login" className="menu-item">Add Recipe</NavLink>
+        <NavLink to="/addRecipe" className="menu-item">Add Recipe</NavLink>
         <NavLink to="/inventory" className="menu-item">Inventory</NavLink>
         <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
       </Menu>
