@@ -10,7 +10,7 @@ class InventoryDefault extends Component {
 	}
 
 	getInventory = () => {
-		fetch('http://localhost:3000/api/inventory')
+		fetch('https://gentle-fortress-56351.herokuapp.com/api/inventory')
 		.then(response => response.json())
 		.then(inventory => this.setState({inventory}))
 		.catch(err => console.log(err))

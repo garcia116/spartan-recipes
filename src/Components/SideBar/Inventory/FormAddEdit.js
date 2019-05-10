@@ -14,7 +14,7 @@ class FormAddEdit extends React.Component {
 
   submitFormAdd = e => {
     e.preventDefault()
-    fetch('http://localhost:3000/api/newInventory', {
+    fetch('https://gentle-fortress-56351.herokuapp.com/api/newInventory', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json'
@@ -38,7 +38,7 @@ class FormAddEdit extends React.Component {
 
   submitFormEdit = e => {
     e.preventDefault()
-    fetch('http://localhost:3000/api/put', {
+    fetch('https://gentle-fortress-56351.herokuapp.com/api/put', {
       method: 'put',
       headers: {
         'Content-Type': 'application/json'
