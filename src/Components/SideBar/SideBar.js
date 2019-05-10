@@ -8,6 +8,8 @@ import { slide as Menu } from 'react-burger-menu';
 import './Sidebar.css';
 import SearchRecipe from './SearchRecipe/Router';
 import Inventory from './Inventory/InventoryDefault';
+import AddRecipeForm from './AddRecipeForm/AddRecipeForm';
+
 
 class Sidebar extends React.Component {
   showSettings (event) {
@@ -28,6 +30,7 @@ class Sidebar extends React.Component {
       </Menu>
       <div className="content">
         <Route path="/" component={SearchRecipe } exact />
+        <Route path="/addRecipe" component={AddRecipeForm}/>
         <Route path="/inventory" component={Inventory}/>
       </div>
       </BrowserRouter>

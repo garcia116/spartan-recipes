@@ -34,11 +34,7 @@ app.get('/api/inventory', (req , res) => {
 
 	db.select('*').from('inventory')
 	.then(inventory => {
-		if(inventory.length){
 			res.json(inventory)
-		} else {
-			res.status(400).json('not found')
-		}
 	})
 	.catch(err => res.status(400).json('error getting inventory'))
 })
@@ -93,5 +89,5 @@ app.get('/profile/:id', (req, res) => {
 
 
 app.listen(process.env.PORT || 3000, ()=> {
-	console.log('app is running on port ${process.env.PORT} || 3000');
-})	
+	console.log('app is running on port ${process.env.PORT}');
+})

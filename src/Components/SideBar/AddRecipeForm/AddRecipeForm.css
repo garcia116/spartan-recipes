@@ -1,0 +1,28 @@
+.AddRecipeForm-01{
+    background: whitesmoke;
+    text-align: left;
+    width: 50%;
+    float:none;
+}
+
+.label{
+    padding-left:9.29rem;
+}
+
+#button{
+    margin-left: -120pt;
+    margin-bottom: 20pt;
+}
+
+#form-top{
+    padding-top:20pt;
+}
+
+.a{
+    margin-left:-100pt;
+    width: 200px;
+}
+textarea.form-control{
+    height:auto;
+    width: 90%;
+}

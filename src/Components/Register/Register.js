@@ -31,7 +31,8 @@ constructor(props) {
   }
 
   onSubmitLogin = (event) => {
-    event.preventDefault();
+        event.stopPropagation();
+
     fetch('https://gentle-fortress-56351.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
