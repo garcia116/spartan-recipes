@@ -4,7 +4,6 @@ import DefaultLayout from './Components/DefaultLayout/DefaultLayout';
 import SideBar from './Components/SideBar/SideBar';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
-import SearchRecipe from './Components/SideBar/SearchRecipe/SearchRecipe';
 
 
 class App extends Component {
@@ -36,16 +35,11 @@ class App extends Component {
   }
 
   onRouteChange = (route) => {
-    if (route === 'signout'){
-      this.setState({isSignedIn: false})
-    } else if (route === 'home') {
-      this.setState({isSignedIn: true})
-    }
     this.setState({route: route });
   }
 
   render() {
-    const { isSignedIn, route } = this.state;
+    const { route } = this.state;
     return (
     <div className="App" >
     	{

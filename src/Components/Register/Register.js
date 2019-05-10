@@ -31,8 +31,7 @@ constructor(props) {
   }
 
   onSubmitLogin = (event) => {
-        event.stopPropagation();
-
+    event.preventDefault();
     fetch('https://gentle-fortress-56351.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
@@ -57,7 +56,7 @@ constructor(props) {
 
     const { onRouteChange } = this.props;
 
-	return (
+  return (
 
   <body>
   <h1 class="site-heading text-center text-white d-none d-lg-block">
@@ -70,23 +69,23 @@ constructor(props) {
  
 </Navbar>
 <div id="content" class>
-	<div id="main">
-		<div class="container">
-			<div class="login-options">
-				<div class="title active">
-					<p class="qa-active">New to Spartan Recipes?</p>
-				</div>
-					<div class="title with-link">
-						<p onClick={() => onRouteChange('login')} class="qa-not-active" >Already registered?</p>			
-					</div>
-					<div class="clear"></div>
-			</div>
-			<br/>
-			<p class="qa-use-email">Register with email</p>
-			
-		</div>
+  <div id="main">
+    <div class="container">
+      <div class="login-options">
+        <div class="title active">
+          <p class="qa-active">New to Spartan Recipes?</p>
+        </div>
+          <div class="title with-link">
+            <p onClick={() => onRouteChange('login')} class="qa-not-active" >Already registered?</p>      
+          </div>
+          <div class="clear"></div>
+      </div>
+      <br/>
+      <p class="qa-use-email">Register with email</p>
+      
+    </div>
 
-	<form>
+  <form>
   <div class="field">
     <label for="InputEmail">Email address:</label>
     <input type="email" 
@@ -106,8 +105,8 @@ constructor(props) {
     />
   </div>
   <div class="field">
-  	<label for="InputLastName">Last Name:</label>
-  	<input type="lname" 
+    <label for="InputLastName">Last Name:</label>
+    <input type="lname" 
     required class="form-control" 
     name="InputLastName" 
     placeholder="Last Name"
@@ -115,8 +114,8 @@ constructor(props) {
     />
   </div>
   <div class="field">
-  	<label for="Password">Password:</label>
-  	<input type="password"
+    <label for="Password">Password:</label>
+    <input type="password"
      required class="form-control" 
      name="InputPassword"
      placeholder="Password"
@@ -127,23 +126,23 @@ constructor(props) {
   </div>
   <br/>
   <input 
-	  onClick={this.onSubmitLogin} 
-	  type="signin" 
-	  class="btn btn-primary btn-lg "
-	   type="submit" 
-	   value="Sign In" 
+    onClick={this.onSubmitLogin} 
+    type="signin" 
+    class="btn btn-primary btn-lg "
+     type="submit" 
+     value="Sign In" 
    />
   <br/>
-  	
+    
   <br/>
 </form>
-	</div>
+  </div>
 
 
 
 </div>
 </body>
-	);
+  );
 }
 }
 

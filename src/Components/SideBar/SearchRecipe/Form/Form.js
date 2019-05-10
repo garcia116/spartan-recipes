@@ -9,7 +9,7 @@ const Form = props => (
     <div className="search text-center" >
     Calories:
     <select name="calories">
-    	<option value = "5000">Select...</option>
+    	<option value = "5000">None</option>
     	<option value="100">100 ></option>
     	<option value="200">200 ></option>
     	<option value="300">300 ></option>
@@ -19,7 +19,7 @@ const Form = props => (
 
     Diet:
     <select multiple name="diet">
-   		<option value = "balanced">Select...</option>
+   		<option value="balanced">None</option>
    		<option value="balanced">Balanced </option>
     	<option value="low-carb">Low-Carb </option>
     	<option value="low-fat">Low-Fat </option>
@@ -29,7 +29,7 @@ const Form = props => (
     
     Lifestyle: 
     <select multiple name="health">
-    	<option value = "alcohol-free">Select...</option>
+    	<option value = "alcohol-free">None</option>
     	<option value="vegan">Vegan ></option>
     	<option value="vegetarian">Vegetarian ></option>
     	<option value="gluten-free">Gluten-free ></option>

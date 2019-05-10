@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Col,Form, InputGroup, Button, Container,Modal} from 'react-bootstrap';
+import {Col,Form, Button, Container} from 'react-bootstrap';
 import './AddRecipeForm.css';
 
 
